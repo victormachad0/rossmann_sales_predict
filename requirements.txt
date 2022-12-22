@@ -1,6 +1,5 @@
 python-dateutil==2.8.2
 pickleshare==0.7.5
-mkl-random==1.2.2
 seaborn==0.12.0
 numpy==1.23.3
 pandas==1.4.4
