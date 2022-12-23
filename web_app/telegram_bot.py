@@ -1,5 +1,6 @@
 import requests
 import json
+import os
 import pandas
 
 from flask import Flask, request, Response
@@ -33,8 +34,8 @@ def send_message(chat_id, text):
 
 def load_dataset(store_id):
     # loading test and store dataset
-    df10 = pd.read_csv( '/Users/Victor/Desktop/repos/ds_em_producao/datasets/test.csv' )
-    df_store_raw = pd.read_csv('/Users/Victor/Desktop/repos/ds_em_producao/datasets/store.csv')
+    df10 = pd.read_csv( '../datasets/test.csv' )
+    df_store_raw = pd.read_csv('../datasets/store.csv')
 
 
     # merge test dataset + store
@@ -59,7 +60,7 @@ def load_dataset(store_id):
 
 def predict(data):
     # API CALL
-    url = 'http://192.168.0.15:5000/rossmann/predict'
+    url = 'https://teste-rossmann-api-j5uf.onrender.com/rossmann/predict'
     header = {'Content-type' : 'application/json'}
     data = data
 
@@ -123,4 +124,5 @@ def index():
         return '<h1> Rossmann Telegram BOT </h1>'
     
 if __name__ == '__main__':
-      app.run(host='0.0.0.0', port = 5000)
+    port = os.environ.get('PORT', 5000)
+      app.run(host='0.0.0.0', port = port)
