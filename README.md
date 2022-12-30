@@ -43,6 +43,10 @@ Como Cientistas de Dados da Rossmann, fomos acionados para trabalhar em uma solu
 
 ### 3.3. Processo até a solução
 
+Iremos utilizar o método CRISP-DS ao longo do projeto, seguindo todas as suas etapas e visando uma primeira entrega mais
+rápida porem mantendo uma boa qualidade, posteriormente poderemos voltar para o inicio do ciclo novamente afim de implementar novas tecnicas e melhorias no 
+projeto caso o resultado final ainda não esteja satisfatório.
+
 - **Business Understand:** Entender mais sobre a motivação do CFO por trás da solicitação da predição de vendas.
 
 - **Data Description:** Entender o quão desafiador é o problema que temos em mãos, conseguiremos responder se temos recursos para trabalhar, quais sãos os tipos de variaveis que temos e a porcentagem de cada uma, a quantidade de dados faltantes e a estatistica descritiva dos dados.
@@ -84,35 +88,56 @@ Como Cientistas de Dados da Rossmann, fomos acionados para trabalhar em uma solu
 <h1 align="center"><img alt="rossmann" title="#logo" src="./img/h5.png" /></h1>
 
 
-## 5.0. Preparação dos Dados
+## 5.0. Modelo de Machine Learning
 
-### 5.1. Dados numericos
+Com nossos dados já tratados e prontos para serem utilizados, escolhemos cinco algoritmos de Regressão
+nesse primeiro ciclo do CRISP, onde iremos fazer o treinamento de cada um e o modelo que melhor performar será
+escolhido para ter seus parametros tunados na etapa seguinte.
 
-- RobustScaler 
-- MinMaxScaler
-
-### 5.2. Dados Categoricos
-
-- One Hot Encoder
-- Label Encoder
-- Ordinal Encoder
-- Nature Transformation
-
-## 6.0. Seleção das Variáveis
-
-- Boruta
-- Seleção manual 
-
-## 7.0. Modelo de Machine Learning
-
-- Average Model
+- Average Model (Baseline model)
 - Linear Regression
 - Linear Regression Regularized Model
 - Random Forest Regressor
 - XGBoost Regressor
 
-## 8.0. Hyperparameter Fine Tunning
+### 5.1. Resultado singular
 
-- Random Search
+| MODEL NAME              | MAE         | MAPE     | RMSE        |
+|-------------------------|-------------|----------|-------------|
+| Random Forest Regressor | 679.100778  | 0.099894 | 1010.139337 |
+| XGBoost Regressor       | 867.333164  | 0.126841 | 1270.995299 |
+| Average Model           | 1354.800353 | 0.206400 | 1835.135542 |
+| Linear Regression       | 1867.089774 | 0.292694 | 2671.049215 |
+| Lasso                   | 1891.704881 | 0.289106 | 2744.451740 |
 
-## 9.0. Bussiness Results
+
+
+### 5.2. Performance Real - Cross Validation Time Series
+
+| MODEL NAME              | MAE               | MAPE          | RMSE               |
+|-------------------------|-------------------|---------------|--------------------|
+| Random Forest Regressor | 829.42 +/- 105.66 | 0.12 +/- 0.02 | 1263.03 +/- 191.46 |
+| XGBoost Regressor       | 1080.33 +/- 77.22 | 0.15 +/- 0.01 | 1577.18 +/- 117.34 |
+| Linear Regression       | 1992.27 +/- 41.68 | 0.29 +/- 0.01 | 2846.37 +/- 87.77  |
+| Lasso                   | 2035.84 +/- 54.02 | 0.29 +/- 0.0  | 2964.68 +/- 89.66  |
+
+### 5.3. Seleção do modelo
+
+O modelo selecionado foi o XGBoost, apesar de estar atrás do Random Forest em questão de performance, esse
+modelo possui outras caracteristicas a qual o fez ser o escolhido, os principais pontos são:
+
+- O treinamento do XGBoost é mais rápido
+- Mais leve em comparação ao Random Forest (Infraestrutura)
+- A diferença de performance não foi grande, então podemos abrir mão dessa pequena diferença
+
+### 5.4. Resultado após ajuste nos hyperparametros do modelo
+
+Aplicado o metodo de **Random Search** para encontrar os melhores hyperparametros para serem usados no treinamento
+do XGBoost
+
+| MODEL NAME        | MAE               | MAPE          | RMSE               |
+|-------------------|-------------------|---------------|--------------------|
+| XGBoost Regressor | 666.86415 | 0.098439	 | 957.139598 |
+
+
+## 6.0. Bussiness Results
