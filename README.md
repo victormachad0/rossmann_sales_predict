@@ -133,11 +133,40 @@ modelo possui outras caracteristicas a qual o fez ser o escolhido, os principais
 ### 5.4. Resultado após ajuste nos hyperparametros do modelo
 
 Aplicado o metodo de **Random Search** para encontrar os melhores hyperparametros para serem usados no treinamento
-do XGBoost
+do XGBoost, o resultado foi o seguinte:
 
 | MODEL NAME        | MAE               | MAPE          | RMSE               |
 |-------------------|-------------------|---------------|--------------------|
 | XGBoost Regressor | 666.86415 | 0.098439	 | 957.139598 |
 
+<h1 align="center"><img alt="rossmann" title="#logo" src="./img/model_performance.png" /></h1>
 
 ## 6.0. Bussiness Results
+
+A partir do resultado das predições do modelo, conseguimos montar uma tabela onde é possível ver os resultados
+financeiros para o negócio. Nessa tabela, podemos enxergar qual foi a predição das vendas do modelo para determinada
+loja e também quais são o pior e o melhor cenário dentro das previsões feitas.
+
+
+| LOJAS	 | PREDIÇÕES      | PIOR CENARIO  | MELHOR CENARIO  | MAE       | MAPE   |
+|--------|----------------|---------------|-----------------|-----------|--------|
+| 1      | 164276.046875  | 163961.277575 | 164590.816175   |314.769300 |0.072475|
+| 2      | 177526.093750  | 177181.052160 | 177871.135340   |345.041590 |0.071908|
+| 3      | 261450.015625  | 260877.777766 | 262022.253484   |572.237859 |0.081624|
+| ...    | ...            | ...           | ...             |...        |...     |
+| 1111   | 178148.796875  | 177538.571725 | 178759.022025   |610.225150 |0.131337|
+| 1112   | 344778.156250  | 343658.650483 | 345897.662017   |1119.505767|0.132453|
+| 1113   | 241641.015625  | 241126.693214 | 242155.338036   |514.322411 |0.079661|
+
+De acordo com o resultado do modelo, a soma total de vendas de todas as farmácias ao longo de 6 semanas é:
+
+| CENARIO         | VALORES          |
+|-----------------|------------------|
+| predições       | R$287,963,072.00 |
+| pior cenario    | R$287,215,317.18 |
+| melhor cenario  | R$288,710,821.19 |
+
+## 7.0 Conclusão
+
+
+
