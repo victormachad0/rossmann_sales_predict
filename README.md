@@ -42,16 +42,15 @@ Como Cientistas de Dados da Rossmann, fomos acionados para trabalhar em uma solu
 ### 3.3. Processo até a solução
 
 Iremos utilizar o método CRISP-DS ao longo do projeto, seguindo todas as suas etapas e visando uma primeira entrega mais
-rápida porem mantendo uma boa qualidade, posteriormente poderemos voltar para o inicio do ciclo novamente afim de implementar novas tecnicas e melhorias no 
-projeto caso o resultado final ainda não esteja satisfatório.
+rápida porem mantendo uma boa qualidade, posteriormente poderemos voltar para o inicio do ciclo novamente afim de implementar novas tecnicas e melhorias no projeto caso o resultado final ainda não esteja satisfatório.
 
 - **Business Problem:** Etapa em que é feito um pedido ou pergunta por parte do dono do problema.
 
 - **Business Understand:** Entender mais sobre a motivação do CFO por trás da solicitação da predição de vendas.
 
-- **Data Collect:**
+- **Data Collect:** Fazer a coleta dos dados da Rossmann no [Kaggle](https://www.kaggle.com/c/rossmann-store-sales)
 
-- **Data Cleaning:**
+- **Data Cleaning:** Realizar o tratamento dos dados faltantes no nosso conjunto de dados.
 
 - **Data Description:** Entender o quão desafiador é o problema que temos em mãos, conseguiremos responder se temos recursos para trabalhar, quais sãos os tipos de variaveis que temos , qual porcentagem de cada tipo, a quantidade de dados faltantes e a estatistica descritiva dos dados.
 
