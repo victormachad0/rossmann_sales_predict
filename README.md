@@ -30,16 +30,14 @@ Como Cientistas de Dados da Rossmann, fomos acionados para trabalhar em uma solu
 
 ### 3.2. Ferramentas
 
-- Python 3.8.15
-- Jupyter Notebook
-- Matplotlib and Seaborn
-- Scikit Learn
-- XGBoost
-- Boruta 
-- Random Search
-- Git and Github
-- Render
-- Telegram Bot
+- [Python 3.8.15](https://www.python.org/downloads/release/python-3815/)
+- [Jupyter Notebook](https://jupyter.org/)
+- [Scikit Learn](https://scikit-learn.org/0.21/documentation.html) and [XGBoost](https://xgboost.readthedocs.io/en/stable/)
+- Boruta
+- [Git](https://git-scm.com/) and [Github](https://github.com/)
+- [Render](https://render.com/)
+- [Telegram Bot](https://core.telegram.org/bots/api)
+- [Flask](https://flask.palletsprojects.com/en/2.2.x/)
 
 ### 3.3. Processo até a solução
 
@@ -47,19 +45,25 @@ Iremos utilizar o método CRISP-DS ao longo do projeto, seguindo todas as suas e
 rápida porem mantendo uma boa qualidade, posteriormente poderemos voltar para o inicio do ciclo novamente afim de implementar novas tecnicas e melhorias no 
 projeto caso o resultado final ainda não esteja satisfatório.
 
+- **Business Problem:** Etapa em que é feito um pedido ou pergunta por parte do dono do problema.
+
 - **Business Understand:** Entender mais sobre a motivação do CFO por trás da solicitação da predição de vendas.
 
-- **Data Description:** Entender o quão desafiador é o problema que temos em mãos, conseguiremos responder se temos recursos para trabalhar, quais sãos os tipos de variaveis que temos e a porcentagem de cada uma, a quantidade de dados faltantes e a estatistica descritiva dos dados.
+- **Data Collect:**
+
+- **Data Cleaning:**
+
+- **Data Description:** Entender o quão desafiador é o problema que temos em mãos, conseguiremos responder se temos recursos para trabalhar, quais sãos os tipos de variaveis que temos , qual porcentagem de cada tipo, a quantidade de dados faltantes e a estatistica descritiva dos dados.
 
 - **Feature Engineering:** Derivação de novas features através das originais, que irão nos ajudar na melhoria do modelo de ML, alem de ser parte importante para a validação das hipoteses levantadas e insights para o negócio.
 
-- **EDA:** Entendimento de como as variáveis impactam no fenomeno de vendas, e qual a força desse impacto. Aqui ganhamos experiência do negócio, validaremos as hipoteses levantadas anteriormente e com isso iremos conseguir ter a percebepção de quais variáveis são importantes para descrever nosso fenomeno.
+- **EDA:** Entendimento de como as variáveis impactam no fenomeno de vendas, e qual a força desse impacto. Aqui ganhamos experiência do negócio, validaremos as hipoteses levantadas anteriormente e com isso iremos conseguir ter a percepção de quais variáveis são importantes para descrever nosso fenomeno.
 
-- **Data Preparation:** Parte onde os dados são preparados para que possam ser recebidos pelo modelo de ML, dados categóricos e numéricos recebem diferentes tratamentos para que posssam ficar em uma escala numérica.
+- **Data Preparation:** Parte onde os dados são preparados para que possam ser recebidos pelo modelo de ML, dados categóricos e numéricos recebem diferentes tratamentos para que posssam ficar em uma escala numérica próxima.
 
-- **Feature Selection:** Selecionando as melhores features para o modelo, utilizando o Boruta.  
+- **Feature Selection:** Nesta etapa, devemos escolher as features que melhor descrevem o nosso fenomeno, dizemos que estas são as features mais relevantes para o aprendizado do nosso modelo. 
 
-- **Machine Learning Modeling:** Treinamento dos principais algoritmos de regressão e validação usando o cross-validation time series. 
+- **Machine Learning Modeling:** Neste projeto, escolhemos os principais algoritmos de Regressão para serem treinados com nossos dados. 
 
 - **Hyperparameter Fine Tunning:** Utilizado a tecnica de Random Search para escolher os melhores parametros para performance do algoritmo escolhido.
 
@@ -67,7 +71,7 @@ projeto caso o resultado final ainda não esteja satisfatório.
 
 - **Resultados financeiros:** Tradução do resultado do modelo para um resultado financeiro, tornando fácil o entendimento dos resultados.
 
--  **Deploy para produção:** Criação de um Bot do Telegram que seja capaz de me dar o resultado da predição a partir do numero da loja escolhida. 
+- **Deploy para produção:** Criação de um Bot do Telegram que seja capaz de me dar o resultado da predição a partir do numero da loja escolhida. 
 
 
 ## 4.0. Os 5 principais insights do negócio
@@ -148,25 +152,35 @@ financeiros para o negócio. Nessa tabela, podemos enxergar qual foi a prediçã
 loja e também quais são o pior e o melhor cenário dentro das previsões feitas.
 
 
-| LOJAS	 | PREDIÇÕES      | PIOR CENARIO  | MELHOR CENARIO  | MAE       | MAPE   |
-|--------|----------------|---------------|-----------------|-----------|--------|
-| 1      | 164276.046875  | 163961.277575 | 164590.816175   |314.769300 |0.072475|
-| 2      | 177526.093750  | 177181.052160 | 177871.135340   |345.041590 |0.071908|
-| 3      | 261450.015625  | 260877.777766 | 262022.253484   |572.237859 |0.081624|
-| ...    | ...            | ...           | ...             |...        |...     |
-| 1111   | 178148.796875  | 177538.571725 | 178759.022025   |610.225150 |0.131337|
-| 1112   | 344778.156250  | 343658.650483 | 345897.662017   |1119.505767|0.132453|
-| 1113   | 241641.015625  | 241126.693214 | 242155.338036   |514.322411 |0.079661|
+| LOJAS	 | PREDIÇÕES      | 	PIOR CENARIO  | MELHOR CENARIO  | MAE | MAPE |
+|--------|----------------|----------------|-----------------|-----|------|
+| 	1	    | 164276.046875  | 	163961.277575 | 164590.816175	  |314.769300|	0.072475|
+| 	2	    | 177526.093750  | 	177181.052160 | 	177871.135340	 |345.041590|	0.071908|
+| 	3	    | 261450.015625  | 	260877.777766 | 	262022.253484	 |572.237859|	0.081624|
+| ...	   | ...	           | ...	           | ...	            |...	|...	|
+| 1111	  | 178148.796875	 | 177538.571725	 | 178759.022025   |	610.225150	|0.131337
+| 1112	  | 344778.156250	 | 343658.650483	 | 345897.662017   |	1119.505767	|0.132453
+| 1113	  | 241641.015625	 | 241126.693214	 | 242155.338036   |	514.322411	|0.079661
 
 De acordo com o resultado do modelo, a soma total de vendas de todas as farmácias ao longo de 6 semanas é:
 
-| CENARIO         | VALORES          |
+| CENARIO         | 	VALORES         |
 |-----------------|------------------|
-| predições       | R$287,963,072.00 |
-| pior cenario    | R$287,215,317.18 |
-| melhor cenario  | R$288,710,821.19 |
+| predições	      | R$287,963,072.00 |
+| pior cenario	   | R$287,215,317.18 |
+| melhor cenario	 | R$288,710,821.19 |
 
 ## 7.0 Conclusão
 
+Conseguimos atender o pedido feito pelo CFO, entregando como resultado um bot do Telegram que pode ser acessível
+por qualquer dispositivo conectado a rede. A principal funcionalidade do bot é de que ao passar o numero de uma
+loja para ele, será devolvido como resposta a predição de quanto aquela loja irá faturar nas próximas seis semanas.
 
+### Acesse o RossmanBot: [![image](https://img.shields.io/badge/Telegram-2CA5E0?style=for-the-badge&logo=telegram&logoColor=white)](https://t.me/rossmann_pred_sales_bot)
+ 
+#### Principal funcionalidade:
 
+- /start : inicializa o bot
+- /numero_loja: bot devolve a predição das proximas seis semanas de vendas para aquela loja. (ex: /22)
+
+### Meu LinkedIn: [![LinkedIn](https://img.shields.io/badge/linkedin-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white)](https://t.me/rossmann_pred_sales_bot)
