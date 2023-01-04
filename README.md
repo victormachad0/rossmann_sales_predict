@@ -182,4 +182,4 @@ loja para ele, será devolvido como resposta a predição de quanto aquela loja 
 - /start : inicializa o bot
 - /numero_loja: bot devolve a predição das proximas seis semanas de vendas para aquela loja. (ex: /22)
 
-### Meu LinkedIn: [![LinkedIn](https://img.shields.io/badge/linkedin-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white)](https://t.me/rossmann_pred_sales_bot)
+### Meu LinkedIn: [![LinkedIn](https://img.shields.io/badge/linkedin-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/victor-machado1/)
