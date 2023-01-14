@@ -5,14 +5,7 @@ import pandas as pd
 import os
 from dotenv import find_dotenv, load_dotenv
 from utils import TOKEN
-
 from flask import Flask, request, Response
-
-path_to_dotenv_file = os.path.abspath("utils/.env")
-
-load_dotenv(path_to_dotenv_file)
-
-TOKEN = os.getenv("TOKEN")
 
 # constants
 #TOKEN = '5810358733:AAGYHQRZi1cZUgvxXZLpf6ld9dVj_6ZTFHI'
