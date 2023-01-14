@@ -2,11 +2,12 @@ import requests
 import json
 import os
 import pandas as pd
+from utils import TOKEN
 
 from flask import Flask, request, Response
 
 # constants
-TOKEN = '5810358733:AAGYHQRZi1cZUgvxXZLpf6ld9dVj_6ZTFHI'
+#TOKEN = '5810358733:AAGYHQRZi1cZUgvxXZLpf6ld9dVj_6ZTFHI'
 
 # Info about bot
 #https://api.telegram.org/bot5810358733:AAGYHQRZi1cZUgvxXZLpf6ld9dVj_6ZTFHI/getMe
@@ -19,9 +20,6 @@ TOKEN = '5810358733:AAGYHQRZi1cZUgvxXZLpf6ld9dVj_6ZTFHI'
         
 # send message
 #https://api.telegram.org/bot5810358733:AAGYHQRZi1cZUgvxXZLpf6ld9dVj_6ZTFHI/sendMessage?chat_id=5936467313&text=Hi, i'm great, tks!
-
-# constants
-TOKEN = '5810358733:AAGYHQRZi1cZUgvxXZLpf6ld9dVj_6ZTFHI'
 
 def send_message(chat_id, text):
     url = 'https://api.telegram.org/bot{}/'.format(TOKEN)
