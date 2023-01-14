@@ -2,13 +2,11 @@ import requests
 import json
 import os
 import pandas as pd
-import os
 from dotenv import find_dotenv, load_dotenv
-from utils import TOKEN
 from flask import Flask, request, Response
 
 # constants
-#TOKEN = '5810358733:AAGYHQRZi1cZUgvxXZLpf6ld9dVj_6ZTFHI'
+TOKEN = '5810358733:AAGYHQRZi1cZUgvxXZLpf6ld9dVj_6ZTFHI'
 
 # Info about bot
 #https://api.telegram.org/bot5810358733:AAGYHQRZi1cZUgvxXZLpf6ld9dVj_6ZTFHI/getMe
