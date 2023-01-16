@@ -4,9 +4,10 @@ import os
 import pandas as pd
 from dotenv import find_dotenv, load_dotenv
 from flask import Flask, request, Response
+from utils import TOKEN
 
 # constants
-TOKEN = '5810358733:AAGYHQRZi1cZUgvxXZLpf6ld9dVj_6ZTFHI'
+#TOKEN = '5810358733:AAGYHQRZi1cZUgvxXZLpf6ld9dVj_6ZTFHI'
 
 # Info about bot
 #https://api.telegram.org/bot5810358733:AAGYHQRZi1cZUgvxXZLpf6ld9dVj_6ZTFHI/getMe
