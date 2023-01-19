@@ -28,6 +28,8 @@ Como Cientistas de Dados da Rossmann, fomos acionados para trabalhar em uma solu
 
 - A entrega será de um Bot no Telegram, que opere 24/7 e seja capaz de devolver a soma total da predição das próximas 6 semanas de vendas da loja requisitada
 
+<h1 align="center"><img alt="rossmann" title="#logo" src="./img/bot_example.png" /></h1>
+
 ### 3.2. Ferramentas
 
 - [Python 3.8.15](https://www.python.org/downloads/release/python-3815/)
@@ -140,7 +142,7 @@ do XGBoost, o resultado foi o seguinte:
 
 | MODEL NAME        | MAE               | MAPE          | RMSE               |
 |-------------------|-------------------|---------------|--------------------|
-| XGBoost Regressor | 666.86415 | 0.098439	 | 957.139598 |
+| XGBoost Regressor | 767.819972 | 0.11494	 | 1104.724995 |
 
 <h1 align="center"><img alt="rossmann" title="#logo" src="./img/model_performance.png" /></h1>
 
