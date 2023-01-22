@@ -5,22 +5,6 @@ import pandas as pd
 from dotenv import find_dotenv, load_dotenv
 from flask import Flask, request, Response
 
-
-# constants
-#TOKEN = '5810358733:AAGYHQRZi1cZUgvxXZLpf6ld9dVj_6ZTFHI'
-
-# Info about bot
-#https://api.telegram.org/bot5810358733:AAGYHQRZi1cZUgvxXZLpf6ld9dVj_6ZTFHI/getMe
-
-# get updates
-#https://api.telegram.org/bot5810358733:AAGYHQRZi1cZUgvxXZLpf6ld9dVj_6ZTFHI/getUpdates
-
-# web hook
-#https://api.telegram.org/bot5810358733:AAGYHQRZi1cZUgvxXZLpf6ld9dVj_6ZTFHI/setWebhook?url=
-        
-# send message
-#https://api.telegram.org/bot5810358733:AAGYHQRZi1cZUgvxXZLpf6ld9dVj_6ZTFHI/sendMessage?chat_id=5936467313&text=Hi, i'm great, tks!
-
 TOKEN = os.getenv("TOKEN")
 
 def send_message(chat_id, text):
