@@ -177,7 +177,7 @@ Conseguimos atender o pedido feito pelo CFO, entregando como resultado um bot do
 por qualquer dispositivo conectado a rede. A principal funcionalidade do bot é de que ao passar o numero de uma
 loja para ele, será devolvido como resposta a predição de quanto aquela loja irá faturar nas próximas seis semanas.
 
-### Acesse o RossmanBot: [![image](https://img.shields.io/badge/Telegram-2CA5E0?style=for-the-badge&logo=telegram&logoColor=white)]([https://web.telegram.org/a/#6995474759])
+### Acesse o RossmanBot: [![image](https://img.shields.io/badge/Telegram-2CA5E0?style=for-the-badge&logo=telegram&logoColor=white)]([https://t.me/SalesPredict_bot])
  
 #### Principal funcionalidade:
 
