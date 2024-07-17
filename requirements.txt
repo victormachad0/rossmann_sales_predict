@@ -8,7 +8,7 @@ Boruta==0.3
 xgboost==1.5.0
 scipy==1.9.3
 matplotlib==3.5.3
-flask==2.2.2
+flask==3.0.3
 inflection==0.5.1
 requests==2.28.1
 python-dotenv==0.21.0
